@@ -31,7 +31,8 @@ a { color: var(--accent); }
 .hero { padding: 56px 0 32px; border-bottom: 1px solid var(--line); }
 .eyebrow { margin: 0 0 8px; color: var(--muted); font-size: 14px; letter-spacing: .02em; }
 .hero h1 { margin: 0 0 14px; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; font-family: Georgia, "Times New Roman", serif; font-weight: 600; }
-.summary { max-width: 70ch;justify-content: center; margin: 0 0 22px; color: var(--muted); }
+.summary { max-width: 70ch;text-align: justify;
+  text-justify: inter-word; margin: 0 0 22px; color: var(--muted); }
 .quicklinks { display: flex; flex-wrap: wrap; gap: 10px; }
 .btn { display: inline-block; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 999px; text-decoration: none; font-size: 14px; }
 .btn:hover { background: var(--accent-soft); }
