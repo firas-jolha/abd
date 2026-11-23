@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow" id="meta"></p>
+      <h1 id="title"></h1>
+      <p class="summary" id="summary"></p>
+      <div class="quicklinks" id="quicklinks"></div>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <div class="wrap">
+      <a href="#schedule">Schedule</a>
+      <a href="#announcements">News</a>
+      <a href="#grading">Grading</a>
+      <a href="#resources">Resources</a>
+      <a href="#people">Contacts</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="schedule">
+      <div class="section-head">
+        <h2>Schedule and materials</h2>
+        <input type="search" id="filter" placeholder="Filter topics…" aria-label="Filter topics">
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Week</th><th>Date</th><th>Topic</th><th>Materials</th></tr>
+          </thead>
+          <tbody id="schedule-body"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="no-match" hidden>No topics match that filter.</p>
+    </section>
+
+    <section id="announcements">
+      <h2>Announcements</h2>
+      <ul class="news" id="news"></ul>
+    </section>
+
+    <section id="grading" class="two-col">
+      <div>
+        <h2>Grading</h2>
+        <div id="grades"></div>
+      </div>
+      <div>
+        <h2>Policies</h2>
+        <div id="policies"></div>
+      </div>
+    </section>
+
+    <section id="resources">
+      <h2>Resources</h2>
+      <div class="res-grid" id="res"></div>
+    </section>
+
+    <section id="people">
+      <h2>Contacts</h2>
+      <div class="people" id="people-list"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot" id="foot"></footer>
+
+  <script src="course-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
