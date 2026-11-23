@@ -26,7 +26,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.55; font-size: 16px; }
 a { color: var(--accent); }
-.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.wrap { margin: 0 auto; padding: 0 20px; }
 
 .hero { padding: 56px 0 32px; border-bottom: 1px solid var(--line); }
 .eyebrow { margin: 0 0 8px; color: var(--muted); font-size: 14px; letter-spacing: .02em; }
