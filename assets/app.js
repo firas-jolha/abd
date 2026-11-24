@@ -53,11 +53,11 @@
     $("no-match").hidden = shown > 0;
   });
 
-  // Announcements
-  const news = (C.announcements || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
-  $("news").innerHTML = news.length
-    ? news.map((n) => `<li><time datetime="${esc(n.date)}">${fmtDate(n.date)}</time><span>${esc(n.text)}</span></li>`).join("")
-    : '<li class="empty">Nothing yet.</li>';
+  // // Announcements
+  // const news = (C.announcements || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+  // $("news").innerHTML = news.length
+  //   ? news.map((n) => `<li><time datetime="${esc(n.date)}">${fmtDate(n.date)}</time><span>${esc(n.text)}</span></li>`).join("")
+  //   : '<li class="empty">Nothing yet.</li>';
 
   // Grading
   $("grades").innerHTML = (C.grading || []).map((g) =>
