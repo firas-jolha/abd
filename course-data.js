@@ -23,25 +23,27 @@ window.COURSE = {
 
   instructor: {
     name: "Firas Jolha",
-    role: "Primary Instructor",
+    role: "Instructor",
+    // role: "Primary Instructor",
     email: "f.jolha@innopolis.ru",
-    office: "Online (TG: @FirasJolha), Office hours: by booking", 
+    office: "Virtual (TG: @FirasJolha), Office hours via booking", 
     // Saturday 14:00–15:30
   },
 
   // Teaching assistants (optional; delete entries you don't need)
-  tas: [
-    { name: "Adel Azzi", email: "a.azzi@innopolis.university" },
-  ],
+  // tas: [
+  //   { name: "Adel Azzi", email: "a.azzi@innopolis.university" },
+  // ],
 
   // Quick links shown as buttons at the top
   // Quick links shown as buttons at the top
   links: [
     { label: "Course repository", url: "https://firas-jolha.github.io/abd/" },
-    { label: "Cluster access guide (Lab 00)", url: "materials/labs/lab-00.md" },
-    { label: "Project briefs", url: "materials/project/index.md" },
+    { label: "Cluster access guide (Lab 00)", url: "materials/labs/lab-00.html" },
+    { label: "Project", url: "materials/project/index.html" },
+    { label: "Course Moodle Link", url: "https://moodle.innopolis.university/" },
     { label: "Telegram channel", url: "" },//https://t.me/abd_s27
-    { label: "Submission form", url: "" },
+    { label: "Ktalk Meetings", url: "https://ithelp.ktalk.ru/vr50ubph40bm" },
   ],
 
   // Newest first. date: YYYY-MM-DD
@@ -104,23 +106,33 @@ window.COURSE = {
   // Assessment breakdown (weights should add up to 100).
   // Track F is shown here; Track R weights are in the policies below.
   grading: [
-    { item: "Lab tests (Track S, practical, weekly)", weight: 15 },
-    { item: "Paper summaries (Track S, weekly)", weight: 10 },
-    { item: "Midterm exam", weight: 15 },
+    { item: "Lab tests", weight: 20 },
+    { item: "Midterm exam", weight: 20 },
     { item: "Final exam", weight: 20 },
-    { item: "Project: proposal", weight: 3 },
-    { item: "Project: midway check", weight: 7 },
-    { item: "Project: final paper and artifact", weight: 22 },
-    { item: "Project: defense", weight: 8 },
+    { item: "Project", weight: 40 },
+    // { item: "Project: proposal", weight: 3 },
+    // { item: "Project: midway check", weight: 7 },
+    // { item: "Project: final paper and artifact", weight: 22 },
+    // { item: "Project: defense", weight: 8 },
+  ],
+
+  gradingR: [
+    { item: "Midterm exam", weight: 20 },
+    { item: "Final exam", weight: 20 },
+    { item: "Project", weight: 60 },
+    // { item: "Project: proposal", weight: 65 },
+    // { item: "Project: progress check in week 8", weight: 15 },
+    // { item: "Project: final paper and artifact", weight: 35 },
+    // { item: "Project: defense", weight: 10 },
   ],
 
   // Letter grade thresholds
   gradeLetters: [
     { grade: "A", min: 90 },
-    { grade: "B", min: 80 },
-    { grade: "C", min: 70 },
-    { grade: "D", min: 60 },
-    { grade: "F", min: 0 }
+    { grade: "B", min: 75 },
+    { grade: "C", min: 55 },
+    { grade: "D", min: 0 },
+    // { grade: "F", min: 0 }
   ],
 
   // Extra material grouped by heading
@@ -199,17 +211,13 @@ window.COURSE = {
   
   // Course policies, one paragraph each
   policies: [
-    "Two tracks. Track S (Foundations): four bridge weeks, weekly labs with a 30-minute practical test, weekly paper summaries, and an applied lakehouse paper. Track R (Research): no lab tasks; the lab slot is project time; the project reproduces and extends a published systems result. The week 1 placement test sets your default track; you can switch until the end of week 3.",
-    "Track R grading: midterm 15%, final exam 20%, project 65% (proposal 5, reproduction results in week 9 15, final paper and artifact 35, defense 10). Track S grading is in the table above.",
+    "Two tracks. Track S (Standard): four bridge weeks, weekly labs with a 30-minute practical test, and an applied data lakehouse project. Track R (Research): no lab tasks; the lab slot is project time; the project reproduces and extends a published systems result. The week 1 placement test sets your default track.",
     "Exams: both tracks sit the same midterm (week 8, weeks 1–7) and final (week 15, weeks 9–14). They test concepts and reasoning about systems, not tool syntax. Track R students skip the bridge lectures but the midterm covers them; review topics are on the lectures page.",
     "Lab tests are hands-on: 8 tasks on the cluster in 30 minutes, done individually under your own student number and personal object names (Lab 00, section 6), even though your team shares one account. Results you leave on the cluster are checked after the test, so do not delete them until grades are published.",
-    "Paper summaries (Track S) are due before the next lecture. One page on one of the week's core papers: the problem, the key idea, the main result, and one limitation you see.",
     "Project: teams of 3–4 students of the same track with declared roles and a contribution log. Deliverables: a 6-page IEEE paper, a reproducible artifact (repository that reruns every figure and table), and a 15-minute defense in which every member answers questions about every part.",
-    "Late work loses 10% per day, up to three days. After that it is not accepted unless you have an approved extension.",
-    "The lab cluster is shared. Use 2 executors × 2 cores × 2 GB unless a lab says otherwise, stop your jobs when you finish, don't leave long-running streams open overnight, and always remove Debezium connectors and replication slots at the end of Lab 10.",
+    // "The lab cluster is shared. Use 2 executors × 2 cores × 2 GB unless a lab says otherwise, stop your jobs when you finish, don't leave long-running streams open overnight, and always remove Debezium connectors and replication slots at the end of Lab 10.",
     "You may discuss labs with classmates, but lab test answers, summaries and project code and text you submit must be your own (your team's, for the project). If you use an AI assistant, say how at the end of the document; you are responsible for every claim and number.",
-    "Late work is not accepted unless you have an approved extension.",
-    "You may discuss labs with classmates, but the code and report you submit must be your own. If you use an AI assistant, say how in your report.",
+    "Late work is not accepted unless you have an approved extension."
   ]
   // [
   //   "Late work loses 10% per day, up to three days. After that it is not accepted unless you have an approved extension.",

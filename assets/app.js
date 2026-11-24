@@ -64,11 +64,43 @@
     `<div class="grade-row"><span>${esc(g.item)}</span><b>${esc(g.weight)}%</b><div class="bar"><i style="width:${Number(g.weight) || 0}%"></i></div></div>`
   ).join("");
 
-  $("grade-letters").innerHTML = (C.gradeLetters || []).map((g) =>
-    `<div class="grade-letter"><span>${esc(g.grade)}</span><p>${esc(g.min)}%</p></div>`
+    // Grading
+  $("gradesR").innerHTML = (C.gradingR || []).map((g) =>
+    `<div class="grade-row"><span>${esc(g.item)}</span><b>${esc(g.weight)}%</b><div class="bar"><i style="width:${Number(g.weight) || 0}%"></i></div></div>`
   ).join("");
 
-  $("policies").innerHTML = (C.policies || []).map((p) => `<li><p>${esc(p)}</p></li>`).join("");
+
+  const step = 1; // use 0.01 if scores can have decimals (B max becomes 89.99)
+
+  const grades = C.gradeLetters || [];
+
+  const rows = grades.map((g, i) => ({
+    ...g,
+    max: i === 0 ? 100 : grades [i - 1].min - step
+  }));
+
+  $("grade-letters").innerHTML = (rows || []).map(g => `
+    <div class="row">
+      <div class="head">
+        <span>${g.grade}</span>
+        <span class="range">${g.min} – ${g.max}</span>
+      </div>
+      <div class="track">
+        <div class="bar"><i style="margin-left:${g.min}%; width:${g.max - g.min}%"></i>
+        // <div class="bar"><i style="margin-left:${g.min}%; width:${g.max - g.min}%"></i>
+         /style="width:${g.max - g.min}%; margin-left:${g.min}%;">
+        //  /style="width:${g.max - g.min}%; margin-left:${g.min}%;">
+
+         </div>
+      </div>
+    </div>
+  `).join("");
+
+  // $("grade-letters").innerHTML = (C.gradeLetters || []).map((g) =>
+  //   `<div class="grade-row"><span>${esc(g.grade)}</span><b>${esc(g.min)}%</b><div class="bar"><i style="left:20; width:${Number(g.min) || 0}%"></i></div></div>`
+  // ).join("");
+
+  // $("policies").innerHTML = (C.policies || []).map((p) => `<li><p>${esc(p)}</p></li>`).join("");
 
   // Resources
   $("res").innerHTML = (C.resources || []).map((g) =>
