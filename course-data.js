@@ -54,45 +54,45 @@ window.COURSE = {
   // From week 5 both tracks attend. Labs are for Track F; for Track R the lab slot is project time.
   schedule: [
     { week: 1, date: "2027-01-20", topic: "Placement test. Distributed systems basics: scale-out, failures, HDFS and object storage (S bridge)",
-      slides: "", lab: "materials/labs/lab-01.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-01.html", reading: "", recording: "",
       notes: "Read: DDIA ch. 1; McSherry et al., Scalability! But at what COST? (HotOS 2015). Lab 00 before the lab." },
     { week: 2, date: "2027-01-27", topic: "Spark and Spark SQL: RDDs, DataFrames, the shuffle (S bridge)",
-      slides: "", lab: "materials/labs/lab-02.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-02.html", reading: "", recording: "",
       notes: "Read: Zaharia et al., RDDs (NSDI 2012); Armbrust et al., Spark SQL (SIGMOD 2015). Track R: teams registered." },
     { week: 3, date: "2027-02-03", topic: "NoSQL data models: wide-column, document, graph (S bridge)",
-      slides: "", lab: "materials/labs/lab-03.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-03.html", reading: "", recording: "",
       notes: "Read: DeCandia et al., Dynamo (SOSP 2007); Lakshman and Malik, Cassandra (LADIS 2009). Track S: teams registered. Last week to switch tracks." },
     { week: 4, date: "2027-02-10", topic: "Kafka basics and the lakehouse idea: Parquet and Apache Iceberg (S bridge)",
-      slides: "", lab: "materials/labs/lab-04.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-04.html", reading: "", recording: "",
       notes: "Read: Kreps et al., Kafka (NetDB 2011); Armbrust et al., Lakehouse (CIDR 2021). Track S: project proposal due." },
     { week: 5, date: "2027-02-17", topic: "Columnar storage internals and table formats: Parquet, Iceberg, Delta Lake",
-      slides: "", lab: "materials/labs/lab-05.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-05.html", reading: "", recording: "",
       notes: "Read: Melnik et al., Dremel (VLDB 2010); Zeng et al., Columnar Storage Formats (VLDB 2024)." },
     { week: 6, date: "2027-02-24", topic: "Distributed query processing and optimization: joins, skew, cost-based and adaptive optimization",
-      slides: "", lab: "materials/labs/lab-06.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-06.html", reading: "", recording: "",
       notes: "Read: Leis et al., How Good Are Query Optimizers, Really? (VLDB 2015); Sethi et al., Presto (ICDE 2019). Track S: project proposal due." },
     { week: 7, date: "2027-03-03", topic: "Execution engines: vectorized execution vs. code generation (DuckDB, ClickHouse, Velox, Spark)",
-      slides: "", lab: "materials/labs/lab-07.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-07.html", reading: "", recording: "",
       notes: "Read: Boncz et al., MonetDB/X100 (CIDR 2005); Kersten et al., Compiled and Vectorized Queries (VLDB 2018)." },
     { week: 8, date: "2027-03-10", topic: "Midterm (weeks 1–7, both tracks)",
       slides: "", lab: "", reading: "", recording: "", notes: "No lab this week." },
     { week: 9, date: "2027-03-17", topic: "Stream processing semantics: event time, windows, watermarks, exactly-once",
-      slides: "", lab: "materials/labs/lab-09.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-09.html", reading: "", recording: "",
       notes: "Read: Akidau et al., The Dataflow Model (VLDB 2015); Carbone et al., Apache Flink (2015). Track R: reproduction results in the lab slot." },
     { week: 10, date: "2027-03-24", topic: "Streaming lakehouse: change data capture, Flink/Spark to Iceberg, real-time OLAP",
-      slides: "", lab: "materials/labs/lab-10.md", reading: "", recording: "",
-      notes: "Read: Carbone et al., State Management in Apache Flink (VLDB 2017); Wang et al., Consistency and Completeness in Kafka Streams (SIGMOD 2021). Track F: midway check (pipeline running end to end)." },
+      slides: "", lab: "materials/labs/lab-10.html", reading: "", recording: "",
+      notes: "Read: Carbone et al., State Management in Apache Flink (VLDB 2017); Wang et al., Consistency and Completeness in Kafka Streams (SIGMOD 2021). Track S: midway check (pipeline running end to end)." },
     { week: 11, date: "2027-03-31", topic: "Distributed machine learning: data and model parallelism, parameter servers, Ray, PyTorch DDP",
-      slides: "", lab: "materials/labs/lab-11.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-11.html", reading: "", recording: "",
       notes: "Read: Li et al., Parameter Server (OSDI 2014); Moritz et al., Ray (OSDI 2018); Li et al., PyTorch Distributed (VLDB 2020)." },
     { week: 12, date: "2027-04-07", topic: "Vector data and LLM pipelines: embeddings, HNSW and IVF-PQ, retrieval over a lakehouse",
-      slides: "", lab: "materials/labs/lab-12.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-12.html", reading: "", recording: "",
       notes: "Read: Malkov and Yashunin, HNSW (TPAMI 2020); Jégou et al., Product Quantization (TPAMI 2011). Track R: draft paper due." },
     { week: 13, date: "2027-04-14", topic: "Cloud-native data systems and distributed transactions: storage/compute separation, Raft, Spanner",
-      slides: "", lab: "materials/labs/lab-13.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-13.html", reading: "", recording: "",
       notes: "Read: Dageville et al., Snowflake (SIGMOD 2016); Verbitski et al., Aurora (SIGMOD 2017); Corbett et al., Spanner (OSDI 2012). Track F: draft paper due." },
     { week: 14, date: "2027-04-21", topic: "Governance at scale: lineage, data quality and contracts, access control, differential privacy",
-      slides: "", lab: "materials/labs/lab-14.md", reading: "", recording: "",
+      slides: "", lab: "materials/labs/lab-14.html", reading: "", recording: "",
       notes: "Read: Schelter et al., Automating Large-Scale Data Quality Verification (VLDB 2018); Dwork and Roth, ch. 1–3." },
     { week: 15, date: "2027-04-28", topic: "Final exam (weeks 9–14) and project defenses",
       slides: "", lab: "", reading: "", recording: "",
@@ -104,8 +104,8 @@ window.COURSE = {
   // Assessment breakdown (weights should add up to 100).
   // Track F is shown here; Track R weights are in the policies below.
   grading: [
-    { item: "Lab tests (Track F, practical, weekly)", weight: 15 },
-    { item: "Paper summaries (Track F, weekly)", weight: 10 },
+    { item: "Lab tests (Track S, practical, weekly)", weight: 15 },
+    { item: "Paper summaries (Track S, weekly)", weight: 10 },
     { item: "Midterm exam", weight: 15 },
     { item: "Final exam", weight: 20 },
     { item: "Project: proposal", weight: 3 },
@@ -114,7 +114,15 @@ window.COURSE = {
     { item: "Project: defense", weight: 8 },
   ],
 
-  
+  // Letter grade thresholds
+  gradeLetters: [
+    { grade: "A", min: 90 },
+    { grade: "B", min: 80 },
+    { grade: "C", min: 70 },
+    { grade: "D", min: 60 },
+    { grade: "F", min: 0 }
+  ],
+
   // Extra material grouped by heading
   resources: [
     { group: "Books", items: [

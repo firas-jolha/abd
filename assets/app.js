@@ -63,6 +63,11 @@
   $("grades").innerHTML = (C.grading || []).map((g) =>
     `<div class="grade-row"><span>${esc(g.item)}</span><b>${esc(g.weight)}%</b><div class="bar"><i style="width:${Number(g.weight) || 0}%"></i></div></div>`
   ).join("");
+
+  $("grade-letters").innerHTML = (C.gradeLetters || []).map((g) =>
+    `<div class="grade-letter"><span>${esc(g.grade)}</span><p>${esc(g.min)}%</p></div>`
+  ).join("");
+
   $("policies").innerHTML = (C.policies || []).map((p) => `<li><p>${esc(p)}</p></li>`).join("");
 
   // Resources
